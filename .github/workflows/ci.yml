@@ -26,6 +26,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      # Install root dependencies (needed for skir-client and codegen)
+      - name: Install root dependencies
+        run: npm install
+
       - run: npx skir format --ci
       - run: npx skir snapshot --ci
 

@@ -1,0 +1,9 @@
+struct HelloRequest {
+  name: string = 0;
+}
+
+struct HelloResponse {
+  message: string = 0;
+}
+
+method Greet(HelloRequest): HelloResponse = 1;

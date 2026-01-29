@@ -63,4 +63,3 @@ popd > /dev/null
 echo "✅ Frontend checks passed."
 
 echo "🎉 All checks passed!"
-

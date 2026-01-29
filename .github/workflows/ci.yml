@@ -26,8 +26,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - run npx skir format --ci
-      - run npx skir snapshot --ci
+      - run: npx skir format --ci
+      - run: npx skir snapshot --ci
 
       # 1. Regenerate Skir code
       - name: Skir Gen

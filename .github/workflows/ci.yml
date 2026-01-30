@@ -26,17 +26,12 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # - run: npx skir format --ci
-      # - run: npx skir snapshot --ci
+      - run: npx skir format --ci
+      - run: npx skir snapshot --ci
 
-      # # 1. Regenerate Skir code
-      # - name: Skir Gen
-      #   run: npx skir gen
-
-      # 3. Check Frontend (TypeScript)
-      - name: Install Frontend dependencies
-        working-directory: frontend
-        run: npm install && npm run build
+      # 1. Regenerate Skir code
+      - name: Skir Gen
+        run: npx skir gen
 
       # 2. Check Backend (Python)
       - name: Install Python dependencies
@@ -54,6 +49,19 @@ jobs:
         working-directory: backend
         run: flake8 --exclude venv,skirout .
 
-      # - name: Build Frontend
-      #   working-directory: frontend
-      #   run: npm run build
+      # 3. Check Frontend (TypeScript)
+      - name: Install Frontend dependencies
+        working-directory: frontend
+        run: npm install
+
+      - name: Check Frontend formatting
+        working-directory: frontend
+        run: npm run format:check
+
+      - name: Lint Frontend
+        working-directory: frontend
+        run: npm run lint
+
+      - name: Build Frontend
+        working-directory: frontend
+        run: npm run build

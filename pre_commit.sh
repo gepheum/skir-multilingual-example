@@ -56,6 +56,12 @@ pushd "$SCRIPT_DIR/frontend" > /dev/null
 echo "   Installing dependencies..."
 npm install > /dev/null
 
+echo "   Checking code formatting..."
+npm run format:check
+
+echo "   Running lint..."
+npm run lint
+
 echo "   Building..."
 npm run build
 

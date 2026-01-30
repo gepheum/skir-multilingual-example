@@ -13,7 +13,6 @@ This is a simple web application demonstrating how to use Skir with a Python bac
 
 - Node.js and npm
 - Python 3
-- Required Python dependencies: `skir-client` (included via relative path from repository)
 
 ## Setup
 
@@ -39,9 +38,9 @@ This is a simple web application demonstrating how to use Skir with a Python bac
    ```bash
    cd frontend
    npm install
-   npm run dev
+   npm run serve
    ```
-   Open the browser at the URL shown (usually `http://localhost:3000`).
+   Open the browser at the URL shown (usually `http://localhost:8000`).
 
 ## Usage
 

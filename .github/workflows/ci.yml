@@ -52,8 +52,8 @@ jobs:
       # 3. Check Frontend (TypeScript)
       - name: Install Frontend dependencies
         working-directory: frontend
-        run: npm install
+        run: npm install && npm run build
 
-      - name: Build Frontend
-        working-directory: frontend
-        run: npm run build
+      # - name: Build Frontend
+      #   working-directory: frontend
+      #   run: npm run build

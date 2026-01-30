@@ -26,7 +26,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-
       - run: npx skir format --ci
       - run: npx skir snapshot --ci
 
@@ -54,10 +53,6 @@ jobs:
       - name: Install Frontend dependencies
         working-directory: frontend
         run: npm install
-
-      - name: Skir Gen (frontend)
-        working-directory: frontend
-        run: npx skir gen
 
       - name: Build Frontend
         working-directory: frontend

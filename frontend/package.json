@@ -10,7 +10,7 @@
     "format:check": "prettier \"src/**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.prettierignore --check"
   },
   "dependencies": {
-    "skir-client": "^1.0.9"
+    "skir-client": "^1.0.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",

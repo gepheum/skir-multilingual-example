@@ -15,13 +15,13 @@
     "To verify the snapshot is up-to-date in CI:",
     "  npx skir snapshot --ci"
   ],
-  "lastChange": "2026-01-29T19:42:13.775Z",
+  "lastChange": "2026-03-04T12:20:57.324Z",
   "trackedRecordIds": [],
   "untrackedRecordIds": [
     "api.skir:HelloRequest",
     "api.skir:HelloResponse"
   ],
   "modules": {
-    "api.skir": "struct HelloRequest {\n  name: string = 0;\n}\n\nstruct HelloResponse {\n  message: string = 0;\n}\n\nmethod Greet(HelloRequest): HelloResponse = 1;\n"
+    "api.skir": "struct HelloRequest {\n  name: string = 0;\n}\n\nstruct HelloResponse {\n  message: string = 0;\n}\n\nmethod Greet(\n  HelloRequest\n): HelloResponse = 1;\n"
   }
 }

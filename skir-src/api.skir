@@ -6,4 +6,6 @@ struct HelloResponse {
   message: string = 0;
 }
 
-method Greet(HelloRequest): HelloResponse = 1;
+method Greet(
+  HelloRequest
+): HelloResponse = 1;
